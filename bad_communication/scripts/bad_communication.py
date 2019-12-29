@@ -5,6 +5,7 @@ from os import system, path, makedirs
 def format2double_space(data):
     formatted_data = ''
     double_space = ' '*2
+    counter = 0
 
     for data_n in data:
         for string in data_n:
@@ -14,6 +15,9 @@ def format2double_space(data):
                 formatted_data += string
             else:
                 formatted_data += string+double_space
+                counter += 1
+
+    formatted_data += '\n\n[{}]'.format(counter)
 
     return formatted_data
 
